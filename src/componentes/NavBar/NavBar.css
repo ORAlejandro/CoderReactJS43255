@@ -1,0 +1,13 @@
+.flexNavBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #debbff;
+}
+
+li {
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: 2rem;
+    color: white;
+}
