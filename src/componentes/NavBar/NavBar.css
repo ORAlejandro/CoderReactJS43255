@@ -1,13 +1,31 @@
 .flexNavBar {
+    background-color: black;
+}
+
+.flexDivBar {
     display: flex;
-    justify-content: space-around;
+    flex-flow: row wrap;
     align-items: center;
-    background-color: #debbff;
+    justify-content: space-around;
+}
+
+.wePlay {
+    font-size: 2rem;
+    color: whitesmoke;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 li {
     cursor: pointer;
     text-transform: uppercase;
     margin-left: 2rem;
-    color: white;
+    color: whitesmoke;
+    font-size: 1rem;
 }
