@@ -12,6 +12,7 @@
 .wePlay {
     font-size: 2rem;
     color: whitesmoke;
+    cursor: pointer;
 }
 
 ul {
