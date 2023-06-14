@@ -7,9 +7,8 @@ const App = () => {
   return (
     <div className="container-lg">
       <NavBar/>
-      <h2 className="primerTitulo">Productos Destacados</h2>
-      <ItemListContainer greeting = {"Mensaje por props en ItemListContainer"}/>
-      <ItemCount stock={15} inicial={1}/>
+      <ItemListContainer/>
+      
     </div>
   )
 }
