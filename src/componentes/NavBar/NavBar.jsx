@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
 import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
+import { Link, NavLink } from 'react-router-dom'
 
 const NavBar = () => {
     const [categoria, setCategoria] = useState("Home");
 
-    useEffect( () => {
+    useEffect(() => {
         document.title = `wePlay | ${categoria}`
     }, [categoria])
 
@@ -17,17 +18,33 @@ const NavBar = () => {
         <header>
             <nav className='flexNavBar'>
                 <div className='flexDivBar'>
-                    <h1 onClick={ () => handleClick("Home")} className='wePlay'>wePlay</h1>
+                    <Link to={"/"}>
+                        <h1 onClick={() => handleClick("Home")} className='wePlay'>wePlay</h1>
+                    </Link>
                     <div>
                         <ul>
-                            <li onClick={ () => handleClick("Teclados")}>Teclados</li>
-                            <li onClick={ () => handleClick("Mouse")}>Mouse</li>
-                            <li onClick={ () => handleClick("Auriculares")}>Auriculares</li>
-                            <li onClick={ () => handleClick("Monitores")}>Monitores</li>
-                            <li onClick={ () => handleClick("Gabinetes")}>Gabinetes</li>
+                            <NavLink to={"/teclados"}>
+                                <li onClick={() => handleClick("Teclados")}>Teclados</li>
+                            </NavLink>
+
+                            <NavLink to={"/mouse"}>
+                                <li onClick={() => handleClick("Mouse")}>Mouse</li>
+                            </NavLink>
+
+                            <NavLink to={"/auriculares"}>
+                                <li onClick={() => handleClick("Auriculares")}>Auriculares</li>
+                            </NavLink>
+
+                            <NavLink to={"/monitores"}>
+                                <li onClick={() => handleClick("Monitores")}>Monitores</li>
+                            </NavLink>
+
+                            <NavLink to={"/gabinetes"}>
+                                <li onClick={() => handleClick("Gabinetes")}>Gabinetes</li>
+                            </NavLink>
                         </ul>
                     </div>
-                    <CartWidget/>
+                    <CartWidget />
                 </div>
             </nav>
         </header>
