@@ -6,7 +6,7 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailCon
 
 const App = () => {
   return (
-    <div>
+    <>
       <BrowserRouter>
         <NavBar/>
         <Routes>
@@ -15,7 +15,7 @@ const App = () => {
           <Route path="/item/:idItem" element={<ItemDetailContainer/>}/>
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   )
 }
 
