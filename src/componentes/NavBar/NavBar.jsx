@@ -23,29 +23,34 @@ const NavBar = () => {
                     </Link>
                     <div>
                         <ul>
-                            <NavLink to={"/teclados"}>
-                                <li onClick={() => handleClick("Teclados")}>Teclados</li>
-                            </NavLink>
 
-                            <NavLink to={"/mouse"}>
-                                <li onClick={() => handleClick("Mouse")}>Mouse</li>
-                            </NavLink>
+                            <li onClick={() => handleClick("Teclados")}>
+                                <NavLink to={`/categoria/teclado`}>Teclados</NavLink>
+                            </li>
 
-                            <NavLink to={"/auriculares"}>
-                                <li onClick={() => handleClick("Auriculares")}>Auriculares</li>
-                            </NavLink>
+                            <li onClick={() => handleClick("Mouse")}>
+                                <NavLink to={`/categoria/mouse`}>Mouse</NavLink>
+                            </li>
+                            <li onClick={() => handleClick("Auriculares")}>
+                                <NavLink to={`/categoria/auricular`}>Auriculares</NavLink>
+                            </li>
 
-                            <NavLink to={"/monitores"}>
-                                <li onClick={() => handleClick("Monitores")}>Monitores</li>
-                            </NavLink>
+                            <li onClick={() => handleClick("Monitores")}>
+                                <NavLink to={`/categoria/monitor`}>Monitores</NavLink>
+                            </li>
 
-                            <NavLink to={"/gabinetes"}>
-                                <li onClick={() => handleClick("Gabinetes")}>Gabinetes</li>
-                            </NavLink>
+                            <li onClick={() => handleClick("Gabinetes")}>
+                                <NavLink to={`/categoria/gabinete`}>Gabinetes</NavLink>
+                            </li>
+
                         </ul>
+
                     </div>
+
                     <CartWidget />
+
                 </div>
+
             </nav>
         </header>
     )
