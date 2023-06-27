@@ -25,22 +25,22 @@ const NavBar = () => {
                         <ul>
 
                             <li onClick={() => handleClick("Teclados")}>
-                                <NavLink to={`/categoria/teclado`}>Teclados</NavLink>
+                                <NavLink className="estiloNavLink" to={`/categoria/teclado`}>Teclados</NavLink>
                             </li>
 
                             <li onClick={() => handleClick("Mouse")}>
-                                <NavLink to={`/categoria/mouse`}>Mouse</NavLink>
+                                <NavLink className="estiloNavLink" to={`/categoria/mouse`}>Mouse</NavLink>
                             </li>
                             <li onClick={() => handleClick("Auriculares")}>
-                                <NavLink to={`/categoria/auricular`}>Auriculares</NavLink>
+                                <NavLink className="estiloNavLink" to={`/categoria/auricular`}>Auriculares</NavLink>
                             </li>
 
                             <li onClick={() => handleClick("Monitores")}>
-                                <NavLink to={`/categoria/monitor`}>Monitores</NavLink>
+                                <NavLink className="estiloNavLink" to={`/categoria/monitor`}>Monitores</NavLink>
                             </li>
 
                             <li onClick={() => handleClick("Gabinetes")}>
-                                <NavLink to={`/categoria/gabinete`}>Gabinetes</NavLink>
+                                <NavLink className="estiloNavLink" to={`/categoria/gabinete`}>Gabinetes</NavLink>
                             </li>
 
                         </ul>

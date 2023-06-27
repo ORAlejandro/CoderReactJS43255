@@ -1,7 +1,10 @@
 .tituloProductos {
+    background-color: #F2F4F4;
+    color: #21252a;
+    background-size: 1300px;
     text-align: center;
-    margin-top: 1rem;
-    font-size: 33px;
-    margin-bottom: 1rem;
+    padding-top: 3rem;
+    font-size: 2rem;
+    padding-bottom: 3rem;
     text-transform: uppercase;
 }

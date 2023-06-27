@@ -6,7 +6,7 @@ const allProductos = [
     { id: "5", nombre: "Gabinete Black RGB Solid", precio: 21500, img: "../images/gabinetes/gabinete1.png", idCategoria: "gabinete" },
     { id: "6", nombre: "Gabinete A3 Red", precio: 33500, img: "../images/gabinetes/gabinete2.png", idCategoria: "gabinete" },
     { id: "7", nombre: "Gabinete Spirit Gamer Blue", precio: 26500, img: "../images/gabinetes/gabinete3.png", idCategoria: "gabinete" },
-    { id: "8", nombre: "Gabinete Gamer Black and Red", precio: 19000, img: "../images/gabinetes/gabinete4.png", idCategoria: "gabinete" },
+    { id: "8", nombre: "Gabinete Black and Red", precio: 19000, img: "../images/gabinetes/gabinete4.png", idCategoria: "gabinete" },
     { id: "9", nombre: "Monitor 19' Plano", precio: 54500, img: "../images/monitores/monitor1.png", idCategoria: "monitor" },
     { id: "10", nombre: "Monitor 22' Curvo", precio: 131000, img: "../images/monitores/monitor2.png", idCategoria: "monitor" },
     { id: "11", nombre: "Monitor 21' Plano V", precio: 77500, img: "../images/monitores/monitor3.png", idCategoria: "monitor" },
@@ -16,9 +16,9 @@ const allProductos = [
     { id: "15", nombre: "Mouse Red Dragon", precio: 16500, img: "../images/mouse/mouse3.png", idCategoria: "mouse" },
     { id: "16", nombre: "Mouse Logitech", precio: 22400, img: "../images/mouse/mouse4.png", idCategoria: "mouse" },
     { id: "17", nombre: "Teclado Mecanico Asus", precio: 29250, img: "../images/teclados/teclado1.png", idCategoria: "teclado" },
-    { id: "18", nombre: "Teclado Mecanico Asus S/Num", precio: 31200, img: "../images/teclados/teclado2.png", idCategoria: "teclado" },
+    { id: "18", nombre: "Teclado Asus Reduce", precio: 31200, img: "../images/teclados/teclado2.png", idCategoria: "teclado" },
     { id: "19", nombre: "Teclado Mecanico Ekko", precio: 14500, img: "../images/teclados/teclado3.png", idCategoria: "teclado" },
-    { id: "20", nombre: "Teclado Mecanico RGB Multimedia", precio: 22700, img: "../images/teclados/teclado4.png", idCategoria: "teclado" },
+    { id: "20", nombre: "Teclado RGB Multimedia", precio: 22700, img: "../images/teclados/teclado4.png", idCategoria: "teclado" },
 ]
 
 export const getProductos = () => {
