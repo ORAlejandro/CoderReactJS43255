@@ -23,6 +23,11 @@
     border-radius: 10px;
 }
 
+.btnVerDetalles:hover {
+    background-color: #2C3E50;
+    border: 1px solid #2C3E50;
+}
+
 .pItem {
     color: #3498DB;
     font-weight: bold;
@@ -34,4 +39,10 @@
     background-color: #F4F6F6;
     border: 1px solid #ABB2B9;
     border-radius: 7px;
+}
+
+.divItem:hover {
+    -webkit-box-shadow: 0px 0px 42px -4px rgba(214,219,223,1);
+-moz-box-shadow: 0px 0px 42px -4px rgba(214,219,223,1);
+box-shadow: 0px 0px 42px -4px rgba(214,219,223,1);
 }

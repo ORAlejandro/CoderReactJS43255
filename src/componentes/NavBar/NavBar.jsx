@@ -18,7 +18,7 @@ const NavBar = () => {
         <header>
             <nav className='flexNavBar'>
                 <div className='flexDivBar'>
-                    <Link to={"/"}>
+                    <Link className='linkWePlay' to={"/"}>
                         <h1 onClick={() => handleClick("Home")} className='wePlay'>wePlay</h1>
                     </Link>
                     <div>

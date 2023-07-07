@@ -45,6 +45,11 @@
     border-radius: 10px;
 }
 
+.linkDetail:hover {
+    background-color: #2C3E50;
+    border: 1px solid #2C3E50;
+}
+
 .pDetail {
     text-align: center;
     margin: 0.3rem;

@@ -11,8 +11,16 @@
 
 .wePlay {
     font-size: 2rem;
-    color: whitesmoke;
     cursor: pointer;
+}
+
+.linkWePlay {
+    color: white;
+    text-decoration: none;
+}
+
+.linkWePlay:hover {
+    color: #3498DB;
 }
 
 ul {
@@ -33,5 +41,9 @@ li {
 
 .estiloNavLink {
     text-decoration: none;
-    color: aqua;
+    color: whitesmoke;
+}
+
+.estiloNavLink:hover {
+    color: #3498DB;
 }
