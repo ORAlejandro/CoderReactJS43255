@@ -25,7 +25,9 @@ const ItemDetail = ({ id, nombre, precio, img, stock }) => {
             <h5 className="h5Detail">Código de Producto: {id}</h5>
 
             {
-                agregarCantidad > 0 ? (<Link className="linkDetail" to={"/cart"}> Finalizar Compra</Link>) : (<ItemCount stock={stock} inicial={1} funcionAgregar={handlerCantidad}/>)
+                agregarCantidad > 0 ? 
+                    (<> <Link className="linkSeguir" to="/">Seguir Comprando</Link> <Link className="linkDetail" to={"/cart"}>Finalizar Compra</Link> </>)
+                 : (<ItemCount stock={stock} inicial={1} funcionAgregar={handlerCantidad}/>)
             }
         </div>
     )
