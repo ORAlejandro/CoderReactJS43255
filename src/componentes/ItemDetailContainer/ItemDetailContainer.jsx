@@ -3,7 +3,6 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getDoc, doc } from "firebase/firestore";
 import { db } from "../../services/config";
-//import { getUnProducto } from "../../asyncmock"
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState(null);
@@ -29,13 +28,3 @@ const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer
-
-/*
-
-useEffect( () => {
-        getUnProducto(idItem)
-            .then(res => setProducto(res))
-            .catch(error => console.log(error))
-    }, [idItem])
-
-*/
