@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { db } from "../../services/config";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore";
 
 const Checkout = () => {
     const { cart, clearCart, totalAmount } = useContext(CartContext);
@@ -27,7 +27,7 @@ const Checkout = () => {
         }
 
         const orden = {
-            items: cart.map( producto => ({
+            items: cart.map(producto => ({
                 id: producto.item.id,
                 nombre: producto.item.nombre,
                 cantidad: producto.cantidad
@@ -36,18 +36,37 @@ const Checkout = () => {
             nombre,
             apellido,
             telefono,
-            email
+            email,
+            fecha: new Date()
         };
 
-        addDoc(collection(db, "ordenes"), orden)
-            .then(docRef => {
-                setOrderId(docRef.id);
-                clearCart();
+        Promise.all(
+            orden.items.map(async (productoOrden) => {
+                const productoRef = doc(db, "inventario", productoOrden.id);
+                const productoDoc = await getDoc(productoRef);
+                const currentlyStock = productoDoc.data().stock; 
+
+                await updateDoc(productoRef, {
+                    stock: currentlyStock - productoOrden.cantidad
+                });
             })
-            .catch(error => {
-                console.log("Error al generar la orden", error);
-                setError("Se produjo un error inesperado al generar la orden");
+        )
+            .then(() => {
+                addDoc(collection(db, "ordenes"), orden)
+                    .then((docRef) => {
+                        setOrderId(docRef.id);
+                        clearCart();
+                    })
+                    .catch((error) => {
+                        console.log("Hubo un error al intentar crear la orden", error);
+                        setError("Hubo un error al crear la orden");
+                    })
             })
+            .catch((error) => {
+                console.log("Error al intentar actualizar el stock.", error);
+                setError("Error al actualizar el stock. Intente nuevamente");
+            })
+
     }
 
 
@@ -56,7 +75,7 @@ const Checkout = () => {
             <h2>CHECKOUT</h2>
             <form onSubmit={handlerForm}>
                 {cart.map(producto => (
-                    <div>
+                    <div key={producto.id}>
                         <p>
                             {producto.item.nombre} x {producto.cantidad}
                         </p>
