@@ -4,7 +4,7 @@ import { db } from "../../services/config";
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore";
 
 const Checkout = () => {
-    const { cart, clearCart, totalAmount } = useContext(CartContext);
+    const { cart, clearCart, totalAmount, total } = useContext(CartContext);
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
     const [telefono, setTelefono] = useState("");
@@ -83,6 +83,7 @@ const Checkout = () => {
                         <hr />
                     </div>
                 ))}
+                <p>Total: ${total}</p>
                 <hr />
 
                 <div>
