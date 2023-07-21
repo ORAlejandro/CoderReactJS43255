@@ -4,7 +4,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 //Objeto de configuración, almacena toda la información de la cuenta
 const firebaseConfig = {
-  apiKey: "AIzaSyDH_-LISCllfCChmpTJap02ndrWQJ_i7zs",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "coder-comi43255.firebaseapp.com",
   projectId: "coder-comi43255",
   storageBucket: "coder-comi43255.appspot.com",
