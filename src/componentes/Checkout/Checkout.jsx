@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { db } from "../../services/config";
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore";
+import './Checkout.css'
 
 const Checkout = () => {
     const { cart, clearCart, totalAmount, total } = useContext(CartContext);
@@ -86,20 +87,20 @@ const Checkout = () => {
                 <p>Total: ${total}</p>
                 <hr />
 
-                <div>
-                    <label htmlFor="">Nombre</label>
+                <div className="styleForm">
+                    <label htmlFor="nombre">Nombre</label>
                     <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
 
-                    <label htmlFor="">Apeliido</label>
+                    <label htmlFor="apellido">Apellido</label>
                     <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
 
-                    <label htmlFor="">Telefono</label>
+                    <label htmlFor="telefono">Telefono</label>
                     <input type="text" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
 
-                    <label htmlFor="">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
-                    <label htmlFor="">Confirmación Email</label>
+                    <label htmlFor="emailConfirmacion">Confirmación Email</label>
                     <input type="email" value={confirmEmail} onChange={(e) => setConfirmEmail(e.target.value)} />
                 </div>
 
@@ -107,12 +108,14 @@ const Checkout = () => {
                     error && <p> {error} </p>
                 }
 
-                <button type="submit">Enviar</button>
+            <div className="flexEnviar">
+                <button className="btnEnviar" type="submit">Enviar</button>
+                </div>
 
             </form>
             {
                 orderId && (
-                    <p>Compra con éxito, tu número de orden es {orderId}</p>
+                    <p className="styleOrden">Compra con éxito, tu número de orden es {orderId}</p>
                 )
             }
         </div>

@@ -10,20 +10,26 @@ const Cart = () => {
     if (totalAmount === 0) {
         return (
             <>
-                <h2 className="h2CartEmpty">Tu carrito está vacio</h2>
-                <Link className="linkCart" to="/">Seguir Comprando</Link>
+                <h2 className="h2CartEmpty">¡Ups! Tu carrito está vacio</h2>
+                <div className="flexLinkCart">
+                    <Link className="linkCart" to="/">Ver catalogo completo</Link>
+                </div>
             </>
         )
     }
     return (
-        <div>
-            <h2 className="h2Cart">Tu carrito de compra</h2>
+        <>
+            <h2 className="h2Cart">¡ Tu carrito luce genial !</h2>
             {cart.map(producto => <CartItem key={producto.id} {...producto} />)}
-            <h3>Total: ${total}</h3>
-            <h4>Cantidad Total: {totalAmount}</h4>
-            <button onClick={() => clearCart()}>Vaciar Carrito</button>
-            <Link to="/checkout">Finalizar Compra</Link>
-        </div>
+            <div className="flexCart">
+                <h3 className="h3Total">Total: ${total}</h3>
+                <h4 className="h4CantidadTotal">Cantidad Total: {totalAmount}</h4>
+                <div className="flexBtnCart">
+                    <button className="btnClearCart" onClick={() => clearCart()}>Vaciar Carrito</button>
+                    <Link className="btnFinalizarCompra" to="/checkout">Finalizar Compra</Link>
+                </div>
+            </div>
+        </>
     )
 }
 

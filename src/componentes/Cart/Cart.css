@@ -8,17 +8,32 @@
 }
 
 .linkCart {
-    cursor: pointer;
     text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-    color: #F7F9F9;
-    background-color: black;
-    text-decoration: none;
     margin: 1rem;
-    padding: 0.5rem 1.2rem;
-    border: 1px solid black;
-    border-radius: 10px;
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.linkCart:hover {
+    background-color: #333333;
+}
+
+.linkCart:active {
+    background-color: #1a1a1a;
+}
+
+.flexLinkCart {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .h2CartEmpty {
@@ -28,4 +43,64 @@
     font-size: 1.5rem;
     padding-top: 1.7rem;
     padding-bottom: 1.7rem;
+}
+
+.btnClearCart {
+    margin: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #E74C3C;
+    background-color: #E74C3C;
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btnClearCart:hover {
+    background-color: #b30000;
+}
+
+.btnClearCart:active {
+    background-color: #800000;
+}
+
+.flexCart {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F9F9;
+}
+
+.btnFinalizarCompra {
+    margin: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btnFinalizarCompra:hover {
+    background-color: #45A049;
+}
+
+.btnFinalizarCompra:active {
+    background-color: #367d38;
+}
+
+.h3Total {
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.h4CantidadTotal {
+    font-size: 1.3rem;
 }
