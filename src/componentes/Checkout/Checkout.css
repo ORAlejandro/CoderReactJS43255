@@ -11,7 +11,8 @@
 }
 
 .btnEnviar {
-    margin: 1rem;
+    text-transform: uppercase;
+    margin: 0.5rem;
     padding: 10px 20px;
     border: 2px solid #007BFF;
     background-color: #007BFF;
@@ -32,10 +33,80 @@
 }
 
 .styleOrden {
-    border: 1px solid #0056b3;
+    background-color: #F4F6F6;
     padding: 1rem;
     font-size: 1.5rem;
     text-align: center;
+}
+
+.styleCheckout {
+    background-color: #F4F6F6;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+}
+
+.spanBold {
+    font-weight: bold;
+}
+
+.flexResumen {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 1rem;
     margin-left: 3rem;
-    margin-right: 3rem;
+}
+
+.styleTotal {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.contenedorProducto {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.styleLabel {
+    text-transform: uppercase;
+    padding: 0.4rem;
+}
+
+.styleInput {
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+}
+
+.btnVolverAComprar {
+    text-transform: uppercase;
+    margin: 0.5rem;
+    padding: 10px 20px;
+    border: 2px solid #8a4dff;
+    background-color: #8a4dff;
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btnVolverAComprar:hover {
+    background-color: #b57dff;
+}
+
+.btnVolverAComprar:active {
+    background-color: #6600cc;
+}
+
+.flexBtnVolver {
+    display: flex;
+    justify-content: center;
+    margin: 0.7rem;
+}
+
+.linkVolver {
+    text-decoration: none;
 }

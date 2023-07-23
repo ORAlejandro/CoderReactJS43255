@@ -13,21 +13,6 @@
     margin-right: 1.4rem;
 }
 
-.btnVerDetalles {
-    color: whitesmoke;
-    background-color: black;
-    text-decoration: none;
-    margin: 1rem;
-    padding: 0.5rem 1.2rem;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
-.btnVerDetalles:hover {
-    background-color: #2C3E50;
-    border: 1px solid #2C3E50;
-}
-
 .pItem {
     color: #3498DB;
     font-weight: bold;
@@ -42,7 +27,28 @@
 }
 
 .divItem:hover {
-    -webkit-box-shadow: 0px 0px 42px -4px rgba(214,219,223,1);
--moz-box-shadow: 0px 0px 42px -4px rgba(214,219,223,1);
-box-shadow: 0px 0px 42px -4px rgba(214,219,223,1);
+    -webkit-box-shadow: 0px 0px 42px -4px rgba(214, 219, 223, 1);
+    -moz-box-shadow: 0px 0px 42px -4px rgba(214, 219, 223, 1);
+    box-shadow: 0px 0px 42px -4px rgba(214, 219, 223, 1);
+}
+
+.btnVerDetalles {
+    margin: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btnVerDetalles:hover {
+    background-color: #45A049;
+}
+
+.btnVerDetalles:active {
+    background-color: #367d38;
 }
